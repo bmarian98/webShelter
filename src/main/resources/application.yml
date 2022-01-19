@@ -1,0 +1,56 @@
+
+spring:
+#  mail:
+#    host: smtp.gmail.com
+#    port: 587
+#    username: webshelterapi@gmail.com
+#    password: webpassAPI
+#
+#    properties:
+#      mail:
+#        smtp:
+#          ssl:
+#            trust: "*"
+#          auth: true
+#          starttls:
+#            eable: true
+#          connectiontimeout: 5000
+#          timeout: 3000
+#          writetimeout: 5000
+
+
+  datasource:
+    username: marian
+    password: new123
+    url: "jdbc:postgresql://localhost:5432/web_shelter_db"
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: webshelterapi@gmail.com
+    password: webpassAPI
+
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+
+logging:
+  level:
+    ro:
+      ppaw:
+        webshelter: TRACE
+  file:
+    path: "logs"
+  pattern:
+
+    file: "%d{yyyy/MM/dd.HH:mm:ss} - [%level] %c{1.} [%t] - %msg%n"
+    #path: "logs"
